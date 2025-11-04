@@ -10,6 +10,8 @@ import numpy as np
 import warnings
 warnings.filterwarnings('ignore')
 
+from ucimlrepo import fetch_ucirepo
+
 from sklearn.datasets import load_wine  # Using Wine as proxy for Glass
 from sklearn.model_selection import (
     train_test_split, GridSearchCV, 
@@ -29,9 +31,11 @@ print("=" * 80)
 print("Note: Using Wine dataset as proxy for Glass dataset\n")
 
 # Load dataset
-wine_data = load_wine()
-X = pd.DataFrame(wine_data.data, columns=wine_data.feature_names)
-y = wine_data.target
+glass_identification = fetch_ucirepo(id=42) 
+  
+# data (as pandas dataframes) 
+X = glass_identification.data.features 
+y = glass_identification.data.targets 
 
 print(f"Dataset shape: {X.shape}")
 print(f"Classes: {np.unique(y)}")
