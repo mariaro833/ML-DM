@@ -23,10 +23,11 @@ This report presents a comprehensive machine learning analysis covering:
 Find the best two models by creating complete pipelines that explore both model types and hyperparameters.
 
 ## Dataset Overview
-- **Dataset**: Wine Classification (proxy for Glass Identification)
-- **Samples**: 178 (142 train, 36 test)
-- **Features**: 13 chemical composition measurements
-- **Classes**: 3 (well-balanced: 59, 71, 48 samples)
+- **Dataset**: Glass Identification 
+* Repository URL: https://archive.ics.uci.edu/dataset/42/glass+identification
+- **Number of records**: 214
+- **Features**: 9 chemical composition measurements
+<!-- - **Classes**: 3 (well-balanced: 59, 71, 48 samples) --> TODO: to clear that
 - **Missing Values**: None
 
 ## Pipeline Architecture
